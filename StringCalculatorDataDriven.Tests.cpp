@@ -6,53 +6,30 @@ class TestDataPair{
 public:
     string input;
     int expectedValue;
-    TestDataPair(string _input, int _expectedValue) : input{_input}, expectedValue{_expectedValue}{
-    }
+    TestDataPair(string _input,int _expectedValue) : input{_input}, expectedValue{_expectedValue}{
+      }
 };
 
-TEST(StringCalculatorTestSuite, data_driven_test){
-  vector<TestDataPair> datalist;
-  class TestDataPair{
-public:
-    string input;
-    int expectedValue;
-    TestDataPair(string _input, int _expectedValue) : input{_input}, expectedValue{_expectedValue}{
+
+TEST(StringCalculatorDataDrivenTestSuite,DataDrivenTestCase){
+  vector<TestDataPair> dataList;
+  TestDataPair pair_one { "",0};
+  TestDataPair pair_two { "0",0};
+  TestDataPair pair_three { "1",1};
+  TestDataPair pair_four { "1,2",3};
+  TestDataPair pair_five { "1,2,3",6};
+
+  dataList.push_back(pair_one);
+  dataList.push_back(pair_two);
+  dataList.push_back(pair_three);
+  dataList.push_back(pair_four);
+  dataList.push_back(pair_five);
+  
+  //Iterate using a range-based for-loop
+    for (TestDataPair dataPair : dataList) {
+        int actualValue=Add(dataPair.input);
+        ASSERT_EQ(actualValue,dataPair.expectedValue);
     }
-};
 
-TEST(StringCalculatorTestSuite, data_driven_test){
-  vector<TestDataPair> datalist;
-  TestDataPair pair_one{"", 0};
-  TestDataPair pair_two{"1,2,3",6};
-  TestDataPair pair_three{"1", 1};
-  TestDataPair pair_four{"1,1000", 1001};
-
-  dataList.pushback(pair_one);
-  dataList.pushback(pair_two);
-  dataList.pushback(pair_three);
-  dataList.pushback(pair_four);
-
-  for(TestDataPair dataPair : dataList){
-    int actualValue = Add(dataPair.input);
-    ASSERT_EQ(actualValue, datapair.expectedValue);
-  }
-  
-  
-} pair_one{"", 0};
-  TestPair pair_two{"1,2,3",6};
-  TestPair pair_three{"1", 1};
-  TestPair pair_four{"1,1000", 1001};
-
-  dataList.pushback(pair_one);
-  dataList.pushback(pair_two);
-  dataList.pushback(pair_three);
-  dataList.pushback(pair_four);
-
-  for(TestDataPair dataPair : dataList){
-    int actualValue = Add(dataPair.input);
-    ASSERT_EQ(actualValue, datapair.expectedValue);
-  }
-  
-  
 }
 
