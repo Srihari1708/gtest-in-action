@@ -13,6 +13,7 @@ input = "";
 expectedValue = 0;
 actualValue = Add(input);
 ASSERT_EQ(actualValue, expectedValue);
+}
   
 
 TEST(StringCalculatorTestSuite,Add_emptyInputString_ZeroIsExpected){
