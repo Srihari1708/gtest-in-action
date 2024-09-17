@@ -60,7 +60,7 @@ TEST(StringCalculatorTestSuite, when_delimited_with_newline_and_comma)
 
 TEST(StringCalculatorTestSuite, when_passed_a_delimiter)
 {
-  string input = "//\n,1,2,33//\n4";
+  string input = "//\n,1,2,3//\n4";
   int expectedValue = 10;
 
   int actualValue = Add(input);
