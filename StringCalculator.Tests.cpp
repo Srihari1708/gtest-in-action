@@ -10,3 +10,11 @@ TEST(StringCalculatorTestSuite,Add_emptyInputString_ZeroIsExpected){
   //Assert
   ASSERT_EQ(actualValue,expectedValue);
 }
+
+TEST(StringCalculatorTestSuite,Add_whenSinglenumberispassed_ZeroIsExpected){
+  //Arrange
+  //Act
+  //Assert
+  
+}
+
