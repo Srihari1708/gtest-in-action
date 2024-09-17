@@ -48,3 +48,23 @@ TEST(StringCalculatorTestSuite, when_passed_multiple_comma_delimited_numbers)
   ASSERT_EQ(actualValue,expectedValue);
 }
 
+TEST(StringCalculatorTestSuite, when_delimited_with_newline_and_comma)
+{
+  string input = "1\n2,3,4";
+  int expectedValue = 10;
+
+  int actualValue = Add(input);
+
+  ASSERT_EQ(actualValue,expectedValue);
+}
+
+TEST(StringCalculatorTestSuite, when_passed_a_delimiter)
+{
+  string input = "//\n,1,2,33//\n4";
+  int expectedValue = 10;
+
+  int actualValue = Add(input);
+
+  ASSERT_EQ(actualValue,expectedValue);
+}
+
