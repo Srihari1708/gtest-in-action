@@ -75,3 +75,43 @@ TEST(StringCalculatorTestSuite, when_passed_negative_numbers)
  ASSERT_THROW(Add(input),invalid_argument);
 }
 
+TEST(StringCalculatorTestSuite, when_passed_numbers_over_1000)
+{
+  string input = "1,1,2,10002,1000,1";
+  int expectedValue = 5;
+
+  int actualValue = Add(input);
+
+  ASSERT_EQ(actualValue,expectedValue);
+}
+
+TEST(StringCalculatorTestSuite, when_passed_multicharacter_delimiter)
+{
+  string input = "//[***]\n8***2***3";
+  int expectedValue = 13;
+
+  int actualValue = Add(input);
+
+  ASSERT_EQ(actualValue,expectedValue);
+}
+
+TEST(StringCalculatorTestSuite, when_passed_multiple_delimiters)
+{
+  string input = "//[*][%]\n4*2%3";
+  int expectedValue = 9;
+
+  int actualValue = Add(input);
+
+  ASSERT_EQ(actualValue,expectedValue);
+}
+
+TEST(StringCalculatorTestSuite, when_passed_multiple_multicharacter_delimiters)
+{
+  string input = "//[**][%^]\n4**1%^9";
+  int expectedValue = 14;
+
+  int actualValue = Add(input);
+
+  ASSERT_EQ(actualValue,expectedValue);
+}
+
