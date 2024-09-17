@@ -14,8 +14,15 @@ TEST(StringCalculatorTestSuite,Add_emptyInputString_ZeroIsExpected){
 TEST(StringCalculatorTestSuite,Add_whenSinglenumberispassed_ZeroIsExpected){
   //Arrange
   
-  string input = "0"
+  if(string input = "0")
+  {
   int expectedValue = 0;
+  }
+
+  if(string input = "1")
+  {
+    int expectedValue = "1";
+  }
   
   //Act
   int actualvalue=Add(input);
@@ -23,4 +30,6 @@ TEST(StringCalculatorTestSuite,Add_whenSinglenumberispassed_ZeroIsExpected){
   ASSERT_EQ(actualValue,expectedValue);
   
 }
+
+TEST(StringCalculatorTestSuite, Add_when
 
