@@ -13,23 +13,25 @@ TEST(StringCalculatorTestSuite,Add_emptyInputString_ZeroIsExpected){
 
 TEST(StringCalculatorTestSuite,Add_whenSinglenumberispassed_ZeroIsExpected){
   //Arrange
-  
-  if(string input = "0")
-  {
+  string input = "0"
   int expectedValue = 0;
-  }
-
-  if(string input = "1")
-  {
-    int expectedValue = "1";
-  }
-  
   //Act
-  int actualvalue=Add(input);
+  int actualValue=Add(input);
   //Assert
   ASSERT_EQ(actualValue,expectedValue);
   
 }
 
-TEST(StringCalculatorTestSuite, Add_when
+TEST(StringCalculatorTestSuite, Add_when_passed_two_comma_delimited_numbers)
+{
+  //Arrange
+  string input = "1,2";
+  int expectedValue = "3";
+
+  //Act
+  int actualValue = Add(input);
+
+  //Assert
+  ASSERT_EQ(actualValue,expectedValue);
+}
 
