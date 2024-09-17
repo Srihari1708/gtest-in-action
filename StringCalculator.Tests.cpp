@@ -1,4 +1,4 @@
-1#include "StringCalculator.h"
+#include "StringCalculator.h"
 #include <gtest/gtest.h>
 
 class stringCalculatorFixture:public testing :: Test{
