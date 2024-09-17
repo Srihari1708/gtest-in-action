@@ -71,10 +71,6 @@ TEST(StringCalculatorTestSuite, when_passed_a_delimiter)
 TEST(StringCalculatorTestSuite, when_passed_negative_numbers)
 {
   string input = "1,2,-4,-5";
-  const char* expectedValue = "Negative values not allowed: -4,-5";
-
-  const char* actualValue = Add(input);
-
-  EXPECT_STREQ(actualValue, expectedValue);
+ ASSERT_THROW(Add(input),invalid_argument);
 }
 
