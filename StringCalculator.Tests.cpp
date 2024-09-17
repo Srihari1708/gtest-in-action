@@ -15,8 +15,7 @@ TEST(StringCalculatorTestSuite,Add_whenSinglenumberispassed_ZeroIsExpected){
   //Arrange
   
   string input = "0"
-    
-    int expectedValue = 0;
+  int expectedValue = 0;
   
   //Act
   int actualvalue=Add(input);
