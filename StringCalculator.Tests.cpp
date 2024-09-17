@@ -1,5 +1,19 @@
-#include "StringCalculator.h"
+1#include "StringCalculator.h"
 #include <gtest/gtest.h>
+
+class stringCalculatorFixture:public testing :: Test{
+protected:
+  string input;
+int actualValue;
+int expectedValue;
+};
+
+TEST_F(stringCalculatorFixture, Add_emptyInputString_ZeroIsExpected){
+input = "";
+expectedValue = 0;
+actualValue = Add(input);
+ASSERT_EQ(actualValue, expectedValue);
+  
 
 TEST(StringCalculatorTestSuite,Add_emptyInputString_ZeroIsExpected){
   //Arrange
