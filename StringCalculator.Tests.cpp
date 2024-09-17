@@ -71,6 +71,7 @@ TEST(StringCalculatorTestSuite, when_passed_a_delimiter)
 TEST(StringCalculatorTestSuite, when_passed_negative_numbers)
 {
   string input = "1,2,-4,-5";
+  int expectedValue = 0;
  ASSERT_THROW(Add(input),invalid_argument);
 }
 
