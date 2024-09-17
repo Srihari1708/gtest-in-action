@@ -13,7 +13,7 @@ TEST(StringCalculatorTestSuite,Add_emptyInputString_ZeroIsExpected){
 
 TEST(StringCalculatorTestSuite,Add_whenSinglenumberispassed_ZeroIsExpected){
   //Arrange
-  string input = "0"
+  string input = "0";
   int expectedValue = 0;
   //Act
   int actualValue=Add(input);
@@ -26,7 +26,7 @@ TEST(StringCalculatorTestSuite, Add_when_passed_two_comma_delimited_numbers)
 {
   //Arrange
   string input = "1,2";
-  int expectedValue = "3";
+  int expectedValue = 3;
 
   //Act
   int actualValue = Add(input);
