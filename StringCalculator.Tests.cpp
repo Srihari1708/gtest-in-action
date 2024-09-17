@@ -38,7 +38,7 @@ TEST(StringCalculatorTestSuite, Add_when_passed_two_comma_delimited_numbers)
 TEST(StringCalculatorTestSuite, when_passed_multiple_comma_delimited_numbers)
 {
   //Arrange
-  String input = "7,8,9";
+  string input = "7,8,9";
   int expectedValue = 24;
 
   //Act
