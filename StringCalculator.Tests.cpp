@@ -78,7 +78,7 @@ TEST(StringCalculatorTestSuite, when_passed_negative_numbers)
 TEST(StringCalculatorTestSuite, when_passed_numbers_over_1000)
 {
   string input = "1,1,2,10002,1000,1";
-  int expectedValue = 5;
+  int expectedValue = 1005;
 
   int actualValue = Add(input);
 
