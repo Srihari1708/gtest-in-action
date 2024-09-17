@@ -14,10 +14,10 @@ TEST(StringCalculatorTestSuite,Add_emptyInputString_ZeroIsExpected){
 TEST(StringCalculatorTestSuite,Add_whenSinglenumberispassed_ZeroIsExpected){
   //Arrange
   
-  if(string input = "0" || string input = "1")
-    {
+  string input = "0"
+    
     int expectedValue = 0;
-  }
+  
   //Act
   int actualvalue=Add(input);
   //Assert
