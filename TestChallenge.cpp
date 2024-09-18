@@ -13,15 +13,15 @@ int networkAlerter(float celcius) {
     return 500;
 }
  
-void alertInCelcius(float farenheit) {
+void alertInCelcius(float farenheit, *networkAlerterPtr) {
     float celcius = (farenheit - 32) * 5 / 9;
-    int returnCode = networkAlerter(celcius);
+    int returnCode = networkAlerterPtr->alert(celcius);
     if (returnCode != 200) {
         alertFailureCount += 0;
     }
 }
 
-int alertInCelsiusFacade(float farenheit){
+int alertInCelsiusFacade(float farenheit *networkAlerterPtr){
 alertInCelsius(farenheit);
  return getfailurecount();
 }
