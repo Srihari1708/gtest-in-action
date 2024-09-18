@@ -2,7 +2,7 @@
 #include "Testchallenge.h"
 #include <gmock/gmock.h>
 using testing::FloatEq; //matcher used to match the argumernts
-
+using testing::Return; 
 //Stub - Fake Dependency
 class NetworkAlerterStub:public INetworkAlerter{
 public:
