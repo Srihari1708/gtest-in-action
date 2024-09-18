@@ -1,13 +1,11 @@
-// void alertInCelcius(float farenheit);
-// int getfailurecount();
+//void alertInCelcius(float farenheit);
+//int getFailureCount();
 
-//Abstraction using class interface
+//Abstraction using Class Interface
 // functionpointer
-
 class INetworkAlerter{
 public:
-    virtual int alert(float celsius)=0;
+    virtual int alert(float celcius)=0;
 };
 
-
-int alertInCelsiusFacade(float farenheit, INetworkAlerter *networkAlerterPtr);
+int alertInCelciusFacade(float farenheit,INetworkAlerter *networkAlerterPtr);
