@@ -17,10 +17,10 @@ class StringCalculatorParameterFixture:public StringCalculatorTestFixture, publi
 //Parameter Values
 INSTANTIATE_TEST_SUITE_P(ValidStringCalculatorInputs,StringCalculatorParameterFixture,testing::Values(
   make_tuple("",0),
-  make_tuple("0",0),
+  make_tuple("1",0),
   make_tuple("1",1),
   make_tuple("1,2",3),
-  make_tuple("1,1002",1001)  
+  make_tuple("1,1000",1001)  
 ));
 
 TEST_P(StringCalculatorParameterFixture, ParameterizedTest){
