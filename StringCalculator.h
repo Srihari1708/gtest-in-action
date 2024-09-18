@@ -6,4 +6,4 @@
 
 using namespace std;
 //int Add(const char* input);
-void Add(const string &input);
+int Add(const string &input);
