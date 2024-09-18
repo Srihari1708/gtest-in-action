@@ -1,16 +1,16 @@
-#include <Testchallenge.h>
 #include <gtest/gtest.h>
+#include "TestChallenge.h"
 
-
-//stub - Fake dependency
+//Stub - Fake Dependency
 class NetworkAlerterStub:public INetworkAlerter{
 public:
-    int alert(float celcius) override{
-        return 500;
-    }
+      int  alert(float celcius) override{
+          return 500;
+      }
+
 };
 TEST(NetworkAlerterTestSuite,StateBasedTest){
   NetworkAlerterStub stub;
-  int failurecount = int alertInCelsiusFacade(400,&stub);  
-  ASSERT_EQ(failurecount,1);
+    int failureCount=  alertInCelciusFacade(400,&stub);
+    ASSERT_EQ(failureCount,1);
 }
