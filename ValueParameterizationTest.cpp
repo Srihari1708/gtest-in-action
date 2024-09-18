@@ -7,13 +7,6 @@ protected:
     string input;
     int expectedValue;
     int actualValue;
-
-    // Setting up the test case
-    void SetUp() override {
-        // This will be overridden in the parameterized test
-        input = "";
-        expectedValue = 0;
-    }
 };
 
 class StringCalculatorParameterFixture : public StringCalculatorTestFixture,
@@ -21,7 +14,6 @@ class StringCalculatorParameterFixture : public StringCalculatorTestFixture,
 protected:
     void SetUp() override {
         // Set up parameters for the test based on the current test case
-        StringCalculatorTestFixture::SetUp(); // Call the base setup
         input = std::get<0>(GetParam());
         expectedValue = std::get<1>(GetParam());
     }
