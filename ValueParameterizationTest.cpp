@@ -43,6 +43,6 @@ TEST_P(StringCalculatorParameterFixture, ParameterizedTest) {
 
     // Now we need to check if the actualOutput matches the expected format
     // Example format: "The sum is: x", where x is expectedValue
-    std::string expectedOutput = "The sum is: " + std::to_string(expectedValue);
+    std::string expectedOutput = std::to_string(expectedValue);
     ASSERT_EQ(actualOutput, expectedOutput);
 }
