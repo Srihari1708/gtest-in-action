@@ -26,7 +26,7 @@ protected:
   // After Each Test Case
 void TearDown(){
     
-    
+}    
 };
 
 TEST_F(StringCalculatorDataDrivenFixture,DataDrivenTestCase){
@@ -56,4 +56,4 @@ TEST(StringCalculatorDataDrivenTestSuite,DataDrivenTestCase){
     }
 
 }
-}
+
