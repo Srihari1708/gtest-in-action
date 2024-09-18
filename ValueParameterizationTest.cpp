@@ -9,7 +9,7 @@ protected:
     int actualValue;
 };
 
-class StringCalculatorParameterFixture:public StrinCalculatorFixture, public testing::WithParamInterface<tuple<string,int>>{
+class StringCalculatorParameterFixture:public StringCalculatorTestFixture, public testing::WithParamInterface<tuple<string,int>>{
 
 };
 
