@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <assert.h>
-#include "TestChallenge.h"
+#include "Testchallenge.h"
  
 int alertFailureCount = 0;
 
