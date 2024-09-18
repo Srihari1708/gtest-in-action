@@ -26,12 +26,15 @@ INSTANTIATE_TEST_SUITE_P(ValidStringCalculatorInputs, StringCalculatorParameterF
                              make_tuple("1,2", 3),
                              make_tuple("1,1000", 1001)
                          ));
-
+int displaycount;
+int displayargcount
 void FakeDisplayFunction(int result){
-
+    displaycount++;
+    displayargcount=result;
 }
 
 TEST_P(StringCalculatorParameterFixture, ParameterizedTest) {
     Add(input, &FakeDisplayFunction);
-    //ASSERT_EQ(actualValue, expectedValue);
+    ASSERT_EQ(displaycount, 1);
+    ASSERT_EQ(displayargcount, 0);
 }
