@@ -3,7 +3,10 @@
 #include<Testchallenge.h>
  
 int alertFailureCount = 0;
- 
+
+int getfailurecount(){
+ return alertFailureCount;
+}
 int networkAlerter(float celcius) {
    //Communicate with Network, Require Internet Connectivity and credentials
   //If Communication is successfull , returns 200 otherwise 500
