@@ -6,7 +6,7 @@
 
 class INetworkAlerter{
 public:
-    virtual void alert(float celsius)=0;
+    virtual int alert(float celsius)=0;
 };
 
 
