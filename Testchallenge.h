@@ -10,4 +10,4 @@ public:
 };
 
 
-int alertInCelsiusFacade(float farenheit *networkAlerterPtr);
+int alertInCelsiusFacade(float farenheit, INetworkAlerter *networkAlerterPtr);
