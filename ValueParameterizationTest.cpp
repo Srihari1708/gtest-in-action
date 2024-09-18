@@ -32,7 +32,7 @@ protected:
 
 // Parameter Values for testing
 INSTANTIATE_TEST_SUITE_P(ValidStringCalculatorInputs, StringCalculatorParameterFixture, testing::Values(
-                             std::make_tuple("", 0),
+                             std::make_tuple("", 00),
                              std::make_tuple("1", 1),
                              std::make_tuple("1,2", 3),
                              std::make_tuple("1,1000", 1001)
