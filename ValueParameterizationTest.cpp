@@ -20,8 +20,7 @@ protected:
 };
 
 // Parameter Values for testing
-INSTANTIATE_TEST_SUITE_P(ValidStringCalculatorInputs, StringCalculatorParameterFixture,
-                         testing::Values(
+INSTANTIATE_TEST_SUITE_P(ValidStringCalculatorInputs, StringCalculatorParameterFixture,testing::Values(
                              make_tuple("", 0),
                              make_tuple("1", 1),
                              make_tuple("1,2", 3),
