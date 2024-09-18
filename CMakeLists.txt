@@ -20,6 +20,7 @@ add_executable(
   cleancode
   StringCalculator.cpp
   ValueParameterizationTest.cpp
+  Interaction.test.cpp
   
  )
 target_link_libraries(
